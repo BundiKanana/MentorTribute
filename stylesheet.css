@@ -1,0 +1,125 @@
+/*master styles*/
+:root {
+    /*a is for alpha which represents the opacity*/
+    --primary-color: rgba(6, 156, 226, 0.70);
+}
+/*reset*/
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 0.4;
+}
+
+.container /*pushing stuff to the middle*/
+{
+    /*max-width: 960px;*/
+    margin: auto;
+    overflow: hidden;
+    padding: 0.3rem;
+}
+
+/*landing page styles*/
+.partone{
+    background-color: var(--primary-color);
+    height: 100vh;
+    position: relative;
+}
+
+.partone:before{
+    content: '';
+    background: url('../EuniceMwabe/Images/20200502_215940.jpg') no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.partone > .shortbio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    color: white;
+}
+
+.shortbio  p{
+    font-size: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn{
+    display: inline-block;
+    border: none;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    margin-top: 1rem;
+    text-decoration: none;
+    transition: opacity 1s ease-in;
+}
+.btn:hover{
+    opacity: 0.7;
+}
+/*navbar styles*/
+.navwrapper{
+    display: flex;
+   justify-content: space-between;
+    padding: 38px;
+}
+
+.navbar{
+    display: flex;   
+}
+
+.navwrapper > .navbar > div{
+    text-transform: uppercase;
+    font-size: 0.9em;
+    margin-right: 20px;
+    /*justify-content: space-around;*/
+}
+
+.navbar-content{
+    height: 20px;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.5s;
+}
+
+.navbar-content a {
+    text-decoration: none;
+    color: aliceblue;
+    transition: color 0.5s;
+}
+
+.navbar-content:hover{
+    border-bottom: 1px solid lightblue;
+}
+
+.active-nav-link {
+    border-bottom: 1px solid black;
+}
+
+.active-nav-link a {
+    color:  black !important;
+}
+
+.navwrapper > .topname > div{
+    /*justify-content: center;
+    align-content: center;*/
+    color: aliceblue;
+}
+
+#emname{
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
